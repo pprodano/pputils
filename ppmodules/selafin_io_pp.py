@@ -41,6 +41,7 @@
 from struct import unpack,pack
 import sys
 import numpy as np
+
 #
 class ppSELAFIN:
 
@@ -405,6 +406,9 @@ class ppSELAFIN:
     self.f.seek(pos_prior_to_var_reading)  
     
   # get methods start here
+  def getTitle(self):
+    return self.title
+
   def getPrecision(self):
     return self.float_type,self.float_size
     
@@ -422,6 +426,9 @@ class ppSELAFIN:
     
   def getVarUnits(self):
     return self.vunits
+
+  def getIPARAM(self):
+    return self.IPARAM
     
   def getNPLAN(self):
     return self.NPLAN
